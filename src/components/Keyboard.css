@@ -1,0 +1,38 @@
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 0.4rem;
+  }
+  
+  .keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+  
+  .key {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    background-color: #ddd;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  
+  .key:hover {
+    background-color: #ccc;
+  }
+  
+  .key:active {
+    transform: scale(0.95);
+  }
+  
+  .key.special {
+    background-color: #bbb;
+    font-weight: bold;
+  }  
