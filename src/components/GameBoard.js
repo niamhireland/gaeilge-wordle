@@ -1,4 +1,5 @@
 import React from 'react';
+import './GameBoard.css'; 
 
 const GameBoard = ({ guesses, wordLength }) => {
   return (
