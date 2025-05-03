@@ -37,9 +37,9 @@ In the future, I plan on adding:
 
 ## 🧑‍🏫 Target Audience
 
-+ Irish primary school teachers (especially 4th–6th class)
-+ Senior primary students
-+ Educational technologists working with Gaeilge
++ Irish primary school teachers 
++ Senior primary students (4th–6th class)
++ Anyone working in education with Gaeilge
 
 ## 💌 Feedback Welcome
 
