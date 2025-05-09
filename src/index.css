@@ -4,6 +4,12 @@ body {
   color: #222;
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 .app {
@@ -20,4 +26,8 @@ h1 {
   margin-bottom: 2rem;
   font-size: 2.5rem;
   color: #2c3e50;
+}
+
+body.dark-mode h1 {
+  color: #f1f1f1;
 }

@@ -9,11 +9,19 @@ const WORD_LENGTH = TARGET_WORD.length;
 function App() {
   const [guesses, setGuesses] = useState([]);
   const [currentGuess, setCurrentGuess] = useState('');
+  const [darkMode, setDarkMode] = useState(() => {
+    return localStorage.getItem('darkMode') === 'true';
+  });
   const appRef = useRef(null);
 
   useEffect(() => {
     appRef.current?.focus();
   }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle('dark-mode', darkMode);
+    localStorage.setItem('darkMode', darkMode);
+  }, [darkMode]);
 
   const handleKeyDown = (e) => {
     const key = e.key.toUpperCase();
@@ -47,6 +55,11 @@ function App() {
       onKeyDown={handleKeyDown}
     >
       <h1>Focail</h1>
+
+      <button onClick={() => setDarkMode(!darkMode)}>
+        {darkMode ? '🌞 Light Mode' : '🌙 Dark Mode'}
+      </button>
+
       <GameBoard guesses={[...guesses, currentGuess]} wordLength={WORD_LENGTH} />
       <Keyboard onKeyPress={handleScreenKeyPress} />
     </div>
