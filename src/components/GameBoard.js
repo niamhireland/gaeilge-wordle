@@ -6,15 +6,18 @@ const GameBoard = ({ guesses, wordLength }) => {
     <div className="board">
       {guesses.map((guess, index) => (
         <div key={index} className="row">
-          {[...Array(wordLength)].map((_, i) => (
-            <div key={i} className="cell">
-              {guess[i] || ''}
-            </div>
-          ))}
+          {[...Array(wordLength)].map((_, i) => {
+            const cell = guess[i] || {};
+            return (
+              <div key={i} className={`cell ${cell.status || ''}`}>
+                {cell.letter || ''}
+              </div>
+            );
+          })}
         </div>
       ))}
     </div>
   );
-};
+}; 
 
 export default GameBoard;
