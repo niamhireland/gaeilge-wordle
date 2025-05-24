@@ -6,7 +6,7 @@ import Keyboard from './components/Keyboard';
 const TARGET_WORD = 'ÁRÁN';
 const WORD_LENGTH = TARGET_WORD.length;
 
-function evaluateGuess(guess, target) {
+export function evaluateGuess(guess, target) {
   const result = [];
   const guessLetters = guess.split('');
   const targetLetters = target.split('');
